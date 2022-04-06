@@ -6,11 +6,18 @@ public class Student
 	String studentName;	
 	String id;
 
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
-	}
 	
-	public void setId(String id) {
+//Using setter methods
+	/*
+	 * public void setStudentName(String studentName) { this.studentName =
+	 * studentName; }
+	 * 
+	 * public void setId(String id) { this.id = id; }
+	 */
+
+		public Student(String studentName, String id) 
+		{
+		this.studentName = studentName;
 		this.id = id;
 	}
 

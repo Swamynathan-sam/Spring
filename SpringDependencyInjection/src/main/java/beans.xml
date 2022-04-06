@@ -3,8 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    
-<bean id="s1" class="com.tns.di.Student">
+  <!-- Using setter methods -->
+<!--  
+  <bean id="s1" class="com.tns.di.Student">
 <property name="studentName" value="Gayatri"/>
 <property name="id" value="101"/>
 </bean>
@@ -12,6 +13,25 @@
 <bean id="s2" class="com.tns.di.Student">
 <property name="studentName" value="Dhanya"/>
 <property name="id" value="102"/>
+</bean> -->
+<!--   
+<bean id="s1" class="com.tns.di.Student">
+<constructor-arg name="studentName" value="Gayatri"/>
+<constructor-arg name="id" value="101"/>
 </bean>
 
+<bean id="s2" class="com.tns.di.Student">
+<constructor-arg name="studentName" value="Dhanya"/>
+<constructor-arg name="id" value="102"/>
+</bean>
+-->
+<bean id="MathCheatObjectValue" class="com.tns.di1.MathCheat"/>
+<bean id="s1" class="com.tns.di1.Student">
+<property name="chit" ref="MathCheatObjectValue">
+</property>
+</bean>
+<bean id="s2" class="com.tns.di1.AnotherStudent">
+<property name="chit"  ref="MathCheatObjectValue">
+</property>
+</bean>
 </beans>

@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Exam {
 
 	public static void main(String[] args) {
-		ApplicationContext c=new ClassPathXmlApplicationContext("beans.xml");
+		ApplicationContext c=new ClassPathXmlApplicationContext("beans2.xml");
 		
 		Student s1=c.getBean("s1",Student.class);
          s1.display();
